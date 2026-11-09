@@ -405,3 +405,11 @@ button, input {
 .rank-num { flex: none; width: 92px; }
 .rank-faces { display: flex; flex-wrap: wrap; gap: 4px; }
 .rank-faces img { width: 30px; height: 30px; object-fit: contain; display: block; cursor: pointer; }
+
+/* ---------- tighter content inside sections (space between sections unchanged) ---------- */
+.sec-title { margin-bottom: 6px; }
+.sub-title { margin: 12px 0 6px; }
+#slider { height: 54px; }
+.tree .row { min-height: 17px; line-height: 17px; }
+.tree .row.item::after { top: 8.5px; }
+.tree .row.item:last-child::before { height: 8.5px; }

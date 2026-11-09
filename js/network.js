@@ -318,13 +318,13 @@
   slider.append('defs').html(
     '<pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#000" stroke-width="1"/></pattern>'
   );
-  const TRACK_Y = 26, TRACK_H = 10;
+  const TRACK_Y = 20, TRACK_H = 10;
   const sTrack = slider.append('rect').attr('y', TRACK_Y).attr('height', TRACK_H).attr('fill', '#fff').attr('stroke', '#000').attr('stroke-width', 1).attr('shape-rendering', 'crispEdges');
   const sHatch = slider.append('rect').attr('y', TRACK_Y).attr('height', TRACK_H).attr('fill', 'url(#hatch)').attr('stroke', '#000').attr('stroke-width', 1).attr('shape-rendering', 'crispEdges');
-  const sMin = slider.append('text').attr('y', 56).text(D.minYear);
-  const sMax = slider.append('text').attr('y', 56).attr('text-anchor', 'end').text(D.maxYear);
-  const sYear0 = slider.append('text').attr('y', 11).attr('text-anchor', 'middle');
-  const sYear1 = slider.append('text').attr('y', 11).attr('text-anchor', 'middle');
+  const sMin = slider.append('text').attr('y', 50).text(D.minYear);
+  const sMax = slider.append('text').attr('y', 50).attr('text-anchor', 'end').text(D.maxYear);
+  const sYear0 = slider.append('text').attr('y', 9).attr('text-anchor', 'middle');
+  const sYear1 = slider.append('text').attr('y', 9).attr('text-anchor', 'middle');
   const blue = slider.append('path').attr('class', 'star').attr('d', starPath).attr('fill', '#0000EE');
   const red = slider.append('path').attr('class', 'star').attr('d', starPath).attr('fill', '#E00000');
 
