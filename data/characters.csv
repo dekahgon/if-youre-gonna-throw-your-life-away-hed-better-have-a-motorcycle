@@ -1,0 +1,66 @@
+﻿character_id;name;alias;wikipedia_url;image
+iron_man;Tony Stark;Iron Man;https://it.wikipedia.org/wiki/Iron_Man_(Marvel_Cinematic_Universe);iron_man.png
+steve_rogers;Steve Rogers;Captain America;https://it.wikipedia.org/wiki/Capitan_America;steve_rogers.png
+natasha_romanoff;Natasha Romanoff;Black Widow;https://it.wikipedia.org/wiki/Natasha_Romanoff;natasha_romanoff.png
+james_rhodes;James Rhodes;War Machine;https://it.wikipedia.org/wiki/James_Rhodes_(Marvel_Cinematic_Universe);james_rhodes.png
+bruce_banner;Bruce Banner;The Hulk;https://it.wikipedia.org/wiki/Bruce_Banner_(Marvel_Cinematic_Universe);bruce_banner.png
+thor_odinson;Thor Odinson;Thor;https://it.wikipedia.org/wiki/Thor_(Marvel_Cinematic_Universe);thor_odinson.png
+clint_barton;Clint Barton;Hawkeye;https://it.wikipedia.org/wiki/Clint_Barton_(Marvel_Cinematic_Universe);clint_barton.png
+loki_odinson;Loki Odinson;Loki;https://it.wikipedia.org/wiki/Loki_(Marvel_Cinematic_Universe);loki_odinson.png
+bucky_barnes;Bucky Barnes;Winter Soldier;https://it.wikipedia.org/wiki/Bucky_Barnes_(Marvel_Cinematic_Universe);bucky_barnes.png
+sam_wilson;Sam Wilson;Falcon;https://it.wikipedia.org/wiki/Sam_Wilson_(Marvel_Cinematic_Universe);sam_wilson.png
+peter_quill;Peter Quill;Star Lord;https://it.wikipedia.org/wiki/Star-Lord;peter_quill.png
+gamora;Gamora;Gamora;https://it.wikipedia.org/wiki/Gamora;gamora.png
+rocket;Rocket;Rocket;https://it.wikipedia.org/wiki/Rocket_Raccoon#;rocket.png
+groot;Groot;Groot;https://it.wikipedia.org/wiki/Groot_(Marvel_Cinematic_Universe);groot.png
+drax;Drax;Drax;https://it.wikipedia.org/wiki/Drax_il_Distruttore#Marvel_Cinematic_Universe;drax.png
+wanda_maximoff;Wanda Maximoff;Scarlet Witch;https://it.wikipedia.org/wiki/Wanda_Maximoff_(Marvel_Cinematic_Universe);wanda_maximoff.png
+scott_lang;Scott Lang;Ant-Man;https://it.wikipedia.org/wiki/Scott_Lang_(Marvel_Cinematic_Universe);scott_lang.png
+vision;Vision;Vision;https://it.wikipedia.org/wiki/Visione_(Marvel_Cinematic_Universe);vision.png
+tchalla;T'challa;Black Panther;https://it.wikipedia.org/wiki/T%27Challa_(Marvel_Cinematic_Universe);tchalla.png
+peter_parker;Peter Parker;Spider Man;https://it.wikipedia.org/wiki/Spider-Man_(Marvel_Cinematic_Universe);peter_parker.png
+stephen_strange;Stephen Strange;Doctor Strange;http://it.wikipedia.org/wiki/Dottor_Strange_(Marvel_Cinematic_Universe);stephen_strange.png
+wong;Wong;Sorcerer Supreme;https://en.wikipedia.org/wiki/Wong_(Marvel_Cinematic_Universe);wong.png
+nebula;Nebula;Nebula;https://en.wikipedia.org/wiki/Nebula_(Marvel_Cinematic_Universe);nebula.png
+valkyrie;Valkyrie;Valkyrie;https://en.wikipedia.org/wiki/Valkyrie_(Marvel_Comics);valkyrie.png
+nakia;Nakia;War Dog;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#Nakia;nakia.png
+mantis;Mantis;Mantis;https://en.wikipedia.org/wiki/Mantis_(Marvel_Cinematic_Universe);mantis.png
+hope_van_dyne;Hope van Dyne;The Wasp;https://en.wikipedia.org/wiki/Hope_van_Dyne;hope_van_dyne.png
+carol_danvers;Carol Danvers;Captain Marvel;https://en.wikipedia.org/wiki/Carol_Danvers_(Marvel_Cinematic_Universe);carol_danvers.png
+yelena_belova;Yelena Belova;White Widow;https://en.wikipedia.org/wiki/Yelena_Belova_(Marvel_Cinematic_Universe);yelena_belova.png
+alexei_shostakov;Alexei Shostakov;Red Guardian;https://en.wikipedia.org/wiki/Red_Guardian#Alexei_Shostakov;alexei_shostakov.png
+shang_chi;Shang-Chi;Shang-Chi;https://en.wikipedia.org/wiki/Shang-Chi_(Marvel_Cinematic_Universe);shang_chi.png
+katy_chen;Katy Chen;Katy Chen;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_A%E2%80%93L#Katy_Chen;katy_chen.png
+ying_nan;Ying Nan;Ying Nan;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#Ying_Nan;ying_nan.png
+xu_wenwu;Xu Wenwu;Xu Wenwu;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#Xu_Wenwu;xu_wenwu.png
+xu_xialing;Xu Xialing;Xu Xialing;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#Xu_Xialing;xu_xialing.png
+ajak;Ajak;Ajak;https://en.wikipedia.org/wiki/Ajak;ajak.png
+druig;Druig;Druig;https://en.wikipedia.org/wiki/Druig;druig.png
+gilgamesh;Gilgamesh;Gilgamesh;https://en.wikipedia.org/wiki/Forgotten_One_(character);gilgamesh.png
+ikaris;Ikaris;Ikaris;https://en.wikipedia.org/wiki/Ikaris;ikaris.png
+kingo;Kingo;Kingo;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_A%E2%80%93L#Kingo;kingo.png
+makkari;Makkari;Makkari;https://en.wikipedia.org/wiki/Makkari_(character);makkari.png
+phastos;Phastos;Phastos;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#Phastos;phastos.png
+sersi;Sersi;Sersi;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#Sersi;sersi.png
+sprite;Sprite;Sprite;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#Sprite;sprite.png
+thena;Thena;Thena;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#Thena;thena.png
+america_chavez;America Chavez;Miss America;https://en.wikipedia.org/wiki/America_Chavez;america_chavez.png
+jane_foster;Dr. Jane Foster;The Mighty Thor;https://en.wikipedia.org/wiki/Jane_Foster_(Marvel_Cinematic_Universe);jane_foster.png
+shuri;Shuri;Black Panther;https://en.wikipedia.org/wiki/Shuri_(Marvel_Cinematic_Universe);shuri.png
+monica_rambeau;Monica Rambeau;Monica Rambeau;https://en.wikipedia.org/wiki/Monica_Rambeau;monica_rambeau.png
+kamala_khan;Kamala Khan;Ms. Marvel;https://en.wikipedia.org/wiki/Kamala_Khan_(Marvel_Cinematic_Universe);kamala_khan.png
+james_howlett;James Howlett;Wolverine;https://en.wikipedia.org/wiki/Logan_(film_character);james_howlett.png
+laura_kinney;Laura Kinney;X-23;https://en.wikipedia.org/wiki/X-23;laura_kinney.png
+wade_winston_wilson;Wade Winston Wilson;Deadpool;https://en.wikipedia.org/wiki/Deadpool;wade_winston_wilson.png
+joaquin_torres;Joaquin Torres;Falcon;https://en.wikipedia.org/wiki/Joaquin_Torres_(comics);joaquin_torres.png
+isaiah_bradley;Isaiah Bradley;Isaiah Bradley;https://en.wikipedia.org/wiki/Isaiah_Bradley;isaiah_bradley.png
+ruth_batseraph;Ruth Bat-Seraph;Sabra;https://en.wikipedia.org/wiki/Sabra_(character);ruth_batseraph.png
+ava_starr;Ava Starr;Ghost;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#Ava_Starr_/_Ghost;ava_starr.png
+john_walker;John Walker;John Walker;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_M%E2%80%93Z#John_Walker_/_Captain_America_/_U.S._Agent;john_walker.png
+antonia_dreykov;Antonia Dreykov;Taskmaker;https://en.wikipedia.org/wiki/Characters_of_the_Marvel_Cinematic_Universe:_A%E2%80%93L#Antonia_Dreykov_/_Taskmaster;antonia_dreykov.png
+bob_sentry;Bob / Sentry;The void;https://en.wikipedia.org/wiki/Sentry_(Robert_Reynolds);bob_sentry.png
+reed_richards;Reed Richards;Mister Fantastic;https://en.wikipedia.org/wiki/Mister_Fantastic#In_other_media;reed_richards.png
+sue_storm;Sue Storm;The Invisible Woman;https://en.wikipedia.org/wiki/Invisible_Woman;sue_storm.png
+johnny_storm;Johnny Storm;The Human Torch;https://en.wikipedia.org/wiki/Human_Torch;johnny_storm.png
+ben_grimm;Ben Grimm;The Thing;https://en.wikipedia.org/wiki/Thing_(Marvel_Comics);ben_grimm.png
+frank_castle;Frank Castle;The Punisher;https://en.wikipedia.org/wiki/Frank_Castle_(Marvel_Cinematic_Universe);frank_castle.png

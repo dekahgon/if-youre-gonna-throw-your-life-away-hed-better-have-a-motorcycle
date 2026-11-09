@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>data collection · Marvel network</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="menu">
+  <a href="network.html">network</a><span class="sep">|</span><a href="saved.html">saved networks</a><span class="sep">|</span><a href="data.html" class="current">data collection</a><span class="sep">|</span><a href="about.html">about</a>
+</nav>
+<main class="text-page">
+  <p>Most of the data used to make this network came from the official Marvel website. I put together a list of characters and character appearances for each of the 38 Marvel movies released up to date (9 November 2026). Most of the films on the Marvel website have a description of the main characters, so I took all the heroes from there, excluding all the villains. Some of the movies didn’t have that description, in which case I relied either on my own knowledge of the movies, having watched them, or on a quick search online, looking at the cast on IMDb.</p>
+  <p>At some points I had to use my own discretion. There were moments where I wasn’t sure whether a character would be considered a hero, and moments where a character’s appearance was so short that it didn’t feel worth including. For example, I left out Thor’s appearance in Doctor Strange and Doctor Strange’s appearance in the Thor movies, because those take place in post-credits scenes. I decided to add Loki and Hawkeye when they appear in the Thor movies, but I removed Odin, Heimdall and Dr. Erik Selvig, as these are not well-known Marvel characters by any metric. I included the Wasp in all the movies where she shows up, even if briefly, and I did not include Okoye in the Black Panther movies because, at my discretion, she is not a main character. I also skipped over Melina in Black Widow. Deadpool &amp; Wolverine had multiple cameos that I chose to simplify, so I removed four characters: Johnny Storm, Elektra Natchios, Blade and Gambit. I did, however, include X-23 (Laura Kinney).</p>
+  <p>Source: <a href="https://www.marvel.com/movies" target="_blank" rel="noopener">Marvel website</a></p>
+  <div class="download-wrap">
+    <button class="download-btn" id="download" type="button">download the data files (.zip)</button>
+  </div>
+</main>
+<script src="js/vendor/jszip.min.js"></script>
+<script>
+document.getElementById('download').addEventListener('click', async function () {
+  const btn = this, label = btn.textContent;
+  btn.textContent = 'preparing…';
+  try {
+    const zip = new JSZip();
+    for (const f of ['movies.csv', 'characters.csv', 'appearances.csv']) {
+      const r = await fetch('data/' + f, { cache: 'no-cache' });
+      if (!r.ok) throw new Error(f);
+      zip.file(f, await r.blob());
+    }
+    const blob = await zip.generateAsync({ type: 'blob' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'marvel-network-data.zip';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    btn.textContent = label;
+  } catch (e) {
+    btn.textContent = 'download failed, try again';
+  }
+});
+</script>
+</body>
+</html>

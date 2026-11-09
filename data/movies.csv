@@ -1,0 +1,39 @@
+﻿movie_id;title;release_date;phase
+iron_man;Iron Man;02/05/08;1
+incredible_hulk;The Incredible Hulk;13/06/08;1
+iron_man_2;Iron Man 2;07/05/10;1
+thor;Thor;06/05/11;1
+first_avenger;Captain America: The First Avenger;22/07/11;1
+avengers;The Avengers;04/05/12;1
+iron_man_3;Iron Man 3;03/05/13;2
+dark_world;Thor: The Dark World;08/11/13;2
+winter_soldier;Captain America: The Winter Soldier;04/04/14;2
+guardians;Guardians of the Galaxy;01/08/14;2
+age_of_ultron;Avengers: Age of Ultron;01/05/15;2
+ant_man;Ant-Man;17/07/15;2
+civil_war;Captain America: Civil War;06/05/16;3
+doctor_strange;Doctor Strange;04/11/16;3
+guardians_2;Guardians of the Galaxy Vol. 2;05/05/17;3
+homecoming;Spider-Man: Homecoming;07/07/17;3
+ragnarok;Thor: Ragnarok;03/11/17;3
+black_panther;Black Panther;16/02/18;3
+infinity_war;Avengers: Infinity War;27/04/18;3
+ant_man_wasp;Ant-Man and the Wasp;06/07/18;3
+captain_marvel;Captain Marvel;08/03/19;3
+endgame;Avengers: Endgame;26/04/19;3
+far_from_home;Spider-Man: Far From Home;02/07/19;3
+black_widow;Black Widow;09/07/21;4
+shang_chi;Shang-Chi and the Legend of the Ten Rings;03/09/21;4
+eternals;Eternals;05/11/21;4
+no_way_home;Spider-Man: No Way Home;17/12/21;4
+multiverse_of_madness;Doctor Strange in the Multiverse of Madness;06/05/22;4
+love_and_thunder;Thor: Love and Thunder;08/07/22;4
+wakanda_forever;Black Panther: Wakanda Forever;11/11/22;4
+quantumania;Ant-Man and the Wasp: Quantumania;17/02/23;5
+guardians_3;Guardians of the Galaxy Vol. 3;05/05/23;5
+the_marvels;The Marvels;10/11/23;5
+deadpool_wolverine;Deadpool & Wolverine;26/07/24;5
+brave_new_world;Captain America: Brave New World;14/02/25;5
+thunderbolts;Thunderbolts*;02/05/25;5
+first_steps;The Fantastic Four: First Steps;25/07/25;6
+brand_new_day;Spider-Man: Brand New Day;31/07/26;6

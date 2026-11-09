@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>network · Marvel network</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-network">
+<nav class="menu">
+  <a href="network.html" class="current">network</a><span class="sep">|</span><a href="saved.html">saved networks</a><span class="sep">|</span><a href="data.html">data collection</a><span class="sep">|</span><a href="about.html">about</a>
+</nav>
+<main class="split">
+  <section class="graph-area" id="graph-area">
+    <div class="legend">
+      <div class="row"><svg width="34" height="10"><line x1="1" y1="5" x2="33" y2="5" stroke="#000" stroke-width="1"/></svg><span>1 movie together</span></div>
+      <div class="row"><svg width="34" height="10"><line x1="1" y1="5" x2="33" y2="5" stroke="#000" stroke-width="7"/></svg><span>many movies together</span></div>
+      <div>thickness = number of movies together</div>
+    </div>
+    <svg id="graph"></svg>
+    <div class="zoom-ctrl">
+      <button class="tbtn" id="zoom-in" title="zoom in">[+]</button>
+      <button class="tbtn" id="zoom-out" title="zoom out">[−]</button>
+      <button class="tbtn" id="zoom-reset" title="back to the whole network">[reset zoom]</button>
+      <label class="cluster-ctrl" title="how tightly the characters are pulled together (display only, the measurements do not change)">[clustering: <input type="range" id="cluster" min="0" max="100" value="50" aria-label="clustering of the layout">]</label>
+    </div>
+  </section>
+
+  <aside class="panel">
+    <section class="panel-sec">
+      <div class="sec-title">[timeline]</div>
+      <div class="timeline-row">
+        <svg id="slider"></svg>
+        <button class="icon-btn" id="play" title="play: add the movies one by one" aria-label="play">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="0.5" y="0.5" width="29" height="29" stroke="#000"/><path d="M11 8.5 L21.5 15 L11 21.5 Z" stroke="#000" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" id="treset" title="reset the timeline to the whole range" aria-label="reset timeline">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="0.5" y="0.5" width="29" height="29" stroke="#000"/><path d="M21.2 12.2 A7 7 0 1 0 22 16.5" stroke="#000" stroke-width="1.6"/><path class="fill-ink" d="M23.2 8.2 L22.4 14 L17.2 12.2 Z" fill="#000" stroke="#000" stroke-width="0.6" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <div class="sub-title">[phase]</div>
+      <div id="phases"></div>
+    </section>
+
+    <section class="panel-sec">
+      <div class="sec-title">[measurements]</div>
+      <div class="tree" id="measures"></div>
+    </section>
+
+    <section class="panel-sec">
+      <div class="edit-head">
+        <span class="sec-title">[editing mode]</span>
+        <span class="edit-btns">
+          <button class="tbtn" id="ereset">[reset]</button>
+          <button class="tbtn" id="erandom">[generate random]</button>
+          <button class="tbtn" id="esave">[save current network]</button>
+        </span>
+      </div>
+
+      <div class="sub-title">[movies add/remove]</div>
+      <div class="search" id="movie-search">
+        <div class="search-row">
+          <input type="text" placeholder="search a movie" autocomplete="off" spellcheck="false">
+          <button class="tbtn" data-act="add" disabled>[add]</button>
+          <button class="tbtn" data-act="remove" disabled>[remove]</button>
+        </div>
+        <div class="results"></div>
+      </div>
+
+      <div class="sub-title">[characters add/remove]</div>
+      <div class="search" id="char-search">
+        <div class="search-row">
+          <div class="chipbox"><span class="chips"></span><input type="text" placeholder="search characters, or click their pictures" autocomplete="off" spellcheck="false"></div>
+          <button class="tbtn" data-act="add" disabled>[add]</button>
+          <button class="tbtn" data-act="remove" disabled>[remove]</button>
+        </div>
+        <div class="results"></div>
+      </div>
+
+      <div class="sub-title">(currently shown) <span class="hint">double click to edit</span></div>
+      <div id="shown"></div>
+    </section>
+  </aside>
+</main>
+<div class="tip" id="tip"></div>
+<script src="js/vendor/d3.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/metrics.js"></script>
+<script src="js/network.js"></script>
+</body>
+</html>
