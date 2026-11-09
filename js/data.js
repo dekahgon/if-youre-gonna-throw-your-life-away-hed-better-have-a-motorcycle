@@ -118,6 +118,7 @@
     y0: D.minYear,
     y1: D.maxYear,
     phase: null,
+    cleared: false, // [clear]: start from an empty network; only added movies are shown
     addedMovies: new Set(),
     removedMovies: new Set(),
     addedChars: new Set(),
@@ -126,6 +127,7 @@
   });
 
   MN.clearEdits = (st) => {
+    st.cleared = false;
     st.addedMovies.clear();
     st.removedMovies.clear();
     st.addedChars.clear();
@@ -137,6 +139,7 @@
     y0: st.y0,
     y1: st.y1,
     phase: st.phase,
+    cleared: !!st.cleared,
     addedMovies: [...st.addedMovies],
     removedMovies: [...st.removedMovies],
     addedChars: [...st.addedChars],
@@ -148,6 +151,7 @@
     y0: o.y0,
     y1: o.y1,
     phase: o.phase == null ? null : o.phase,
+    cleared: !!o.cleared,
     addedMovies: new Set(o.addedMovies || []),
     removedMovies: new Set(o.removedMovies || []),
     addedChars: new Set(o.addedChars || []),
@@ -185,7 +189,7 @@
   // Turns the timeline + edits into the network that is displayed.
   MN.derive = function (D, st) {
     const base = new Set(
-      D.movies
+      st.cleared ? [] : D.movies
         .filter((m) => (st.phase != null ? m.phase === st.phase : m.year >= st.y0 && m.year <= st.y1))
         .map((m) => m.id)
     );

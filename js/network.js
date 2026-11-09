@@ -486,13 +486,20 @@
     update();
   });
 
+  document.getElementById('eclear').addEventListener('click', () => {
+    MN.clearEdits(st);
+    st.cleared = true;
+    editingMovie = null;
+    update();
+  });
+
   const saveBtn = document.getElementById('esave');
   saveBtn.addEventListener('click', () => {
     const positions = {};
     for (const n of sim.nodes()) positions[n.id] = [+(n.x / W).toFixed(4), +(n.y / H).toFixed(4)];
     const num = MN.addSave({ state: MN.serializeState(st), positions, area: [W, H] });
     saveBtn.textContent = num ? `[saved as #${num}]` : '[could not save]';
-    setTimeout(() => (saveBtn.textContent = '[save current network]'), 1800);
+    setTimeout(() => (saveBtn.textContent = '[save]'), 1800);
   });
 
   // ---------- search boxes ----------
@@ -724,7 +731,9 @@
   function renderShown() {
     if (editingMovie && !current.active.includes(editingMovie)) editingMovie = null;
     if (!current.active.length) {
-      shownEl.innerHTML = '<div class="empty-note">no movies in the network</div>';
+      shownEl.innerHTML = st.cleared
+        ? '<div class="empty-note">the network is empty. add movies with [movies add/remove] above.</div>'
+        : '<div class="empty-note">no movies in the network</div>';
       return;
     }
     shownEl.innerHTML = current.active
