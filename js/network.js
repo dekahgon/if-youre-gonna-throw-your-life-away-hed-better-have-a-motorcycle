@@ -835,6 +835,7 @@
     stopPlay();
     current = MN.derive(D, st);
     draw(current, opts);
+    document.getElementById('empty-net').hidden = current.nodes.length > 0;
     drawSlider();
     phasesEl.querySelectorAll('[data-phase]').forEach((b) => b.classList.toggle('active', +b.dataset.phase === st.phase));
     renderMetrics(current);

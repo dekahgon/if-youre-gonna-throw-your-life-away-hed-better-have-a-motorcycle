@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>network · Marvel network</title>
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="css/style.css?v=20261109-2310">
+<link rel="stylesheet" href="css/style.css?v=20261109-2320">
 </head>
 <body class="page-network">
 <nav class="menu">
@@ -14,8 +14,6 @@
 <main class="split">
   <section class="graph-area" id="graph-area">
     <div class="legend">
-      <div class="row"><svg width="34" height="10"><line x1="1" y1="5" x2="33" y2="5" stroke="#000" stroke-width="1"/></svg><span>1 movie together</span></div>
-      <div class="row"><svg width="34" height="10"><line x1="1" y1="5" x2="33" y2="5" stroke="#000" stroke-width="7"/></svg><span>many movies together</span></div>
       <div>thickness = number of movies together</div>
     </div>
     <svg id="graph"></svg>
@@ -24,6 +22,10 @@
       <button class="tbtn" id="zoom-out" title="zoom out">[−]</button>
       <button class="tbtn" id="zoom-reset" title="back to the whole network">[reset zoom]</button>
       <label class="cluster-ctrl" title="how tightly the characters are pulled together (display only, the measurements do not change)">[clustering: <input type="range" id="cluster" min="0" max="100" value="50" aria-label="clustering of the layout">]</label>
+    </div>
+    <div class="empty-net" id="empty-net" hidden>
+      <img src="images/empty.jpg" alt="">
+      <div class="empty-caption">you better get that network back!</div>
     </div>
   </section>
 
@@ -90,9 +92,9 @@
   </aside>
 </main>
 <div class="tip" id="tip"></div>
-<script src="js/vendor/d3.min.js?v=20261109-2310"></script>
-<script src="js/data.js?v=20261109-2310"></script>
-<script src="js/metrics.js?v=20261109-2310"></script>
-<script src="js/network.js?v=20261109-2310"></script>
+<script src="js/vendor/d3.min.js?v=20261109-2320"></script>
+<script src="js/data.js?v=20261109-2320"></script>
+<script src="js/metrics.js?v=20261109-2320"></script>
+<script src="js/network.js?v=20261109-2320"></script>
 </body>
 </html>

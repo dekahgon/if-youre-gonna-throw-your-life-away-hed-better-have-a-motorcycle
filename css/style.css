@@ -413,3 +413,20 @@ button, input {
 .tree .row { min-height: 17px; line-height: 17px; }
 .tree .row.item::after { top: 8.5px; }
 .tree .row.item:last-child::before { height: 8.5px; }
+
+/* ---------- empty network: picture over the whole network area ---------- */
+.empty-net { position: absolute; inset: 0; z-index: 5; background: var(--paper); }
+.empty-net[hidden] { display: none; }
+.empty-net img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.empty-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  padding: 8px 16px;
+  white-space: nowrap;
+}
