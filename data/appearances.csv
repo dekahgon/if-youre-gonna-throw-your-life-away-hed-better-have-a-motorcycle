@@ -1,4 +1,4 @@
-﻿character_id;movie_id
+character_id;movie_id
 iron_man;iron_man
 james_rhodes;iron_man
 bruce_banner;incredible_hulk
@@ -49,6 +49,7 @@ wanda_maximoff;civil_war
 vision;civil_war
 tchalla;civil_war
 peter_parker;civil_war
+scott_lang;civil_war
 stephen_strange;doctor_strange
 wong;doctor_strange
 peter_quill;guardians_2
