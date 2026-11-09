@@ -1,4 +1,4 @@
-/* Marvel network — global styles. Black on white, Courier New, 1px black lines. */
+/* Marvel network — global styles. Black on white (light grey header and panel), Arial, 1px black lines. */
 
 :root {
   --ink: #000;
@@ -6,6 +6,8 @@
   --link: #0000EE;
   --grey: #999;
   --line: 1px solid #000;
+  --field: #f3f3f3; /* light grey: header, right panel, tags */
+  --font: Arial, Helvetica, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -15,7 +17,7 @@ html, body {
   padding: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--font);
   font-size: 14px;
   line-height: 1.35;
 }
@@ -24,7 +26,7 @@ a { color: var(--ink); }
 a:hover { color: var(--link); }
 
 button, input {
-  font-family: "Courier New", Courier, monospace;
+  font-family: var(--font);
   font-size: inherit;
   color: var(--ink);
 }
@@ -32,10 +34,13 @@ button, input {
 /* ---------- top menu ---------- */
 
 .menu {
-  text-align: center;
-  padding: 14px 0 12px;
+  height: 59px; /* 30% taller than before (45px) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-bottom: var(--line);
   white-space: nowrap;
+  background: var(--field);
 }
 .menu a { color: var(--ink); text-decoration: none; }
 .menu a:hover, .menu a.current { color: var(--link); text-decoration: underline; }
@@ -170,7 +175,7 @@ button, input {
 .timeline-row { display: flex; align-items: center; gap: 10px; }
 #slider { flex: 1; height: 62px; display: block; touch-action: none; user-select: none; }
 #slider .star { cursor: ew-resize; }
-#slider text { font-family: "Courier New", Courier, monospace; font-size: 12px; fill: var(--ink); }
+#slider text { font-family: var(--font); font-size: 12px; fill: var(--ink); }
 .icon-btn {
   width: 30px;
   height: 30px;
@@ -353,32 +358,50 @@ button, input {
 .chip .x { margin-left: 5px; cursor: pointer; }
 .chip .x:hover { text-decoration: underline; }
 
-/* ---------- lighter grey fields + more compact text, more white space ---------- */
-:root { --field: #f3f3f3; }
+/* ---------- grey panel, white fields, compact text with more white space ---------- */
 
-.panel { font-size: 12px; line-height: 1.25; }
+.panel { font-size: 12px; line-height: 1.25; background: var(--field); }
 .panel-sec { padding: 22px 30px 24px; }
 .sec-title { margin-bottom: 12px; }
 .sub-title { margin: 20px 0 8px; }
 .hint { font-size: 11px; }
-.tree .row { min-height: 16px; }
-.tree .row.item::after { top: 8px; }
-.tree .row.item:last-child::before { height: 8px; }
 #phases { gap: 12px; }
 .edit-btns { gap: 12px; }
 
-/* search bars */
+/* measurements: no empty rows between items, still one continuous line */
+.tree .row { min-height: 18px; line-height: 18px; }
+.tree .row.item::after { top: 9px; }
+.tree .row.item:first-child::before { top: 0; }
+.tree .row.item:last-child::before { height: 9px; }
+
+/* search bars: white */
 .search input,
-.chipbox { background: var(--field); }
+.chipbox { background: var(--paper); }
 .search .chipbox input { background: transparent; }
 .search input { padding: 5px 8px; }
 .chipbox { padding: 4px 6px; }
 .chip { background: var(--paper); }
 
-/* movie cards: grey card, white character tags */
-.movie-box { background: var(--field); padding: 12px 14px; margin-bottom: 12px; }
+/* movie cards: white card, bold title, grey character tags */
+.movie-box { background: var(--paper); padding: 12px 14px; margin-bottom: 12px; }
+.movie-box .title { font-weight: bold; }
 .movie-box .date { font-size: 11px; margin: 2px 0 8px; }
 .movie-box .edit-note { font-size: 10.5px; margin-bottom: 8px; }
 .tags { gap: 5px; }
-.tag { background: var(--paper); font-size: 10.5px; padding: 1px 6px; }
+.tag { background: var(--field); font-size: 10.5px; padding: 1px 6px; }
 .tag.off { background: var(--paper); }
+
+/* [most connected]: one slim white box per number of connections */
+.rank-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--paper);
+  border: var(--line);
+  padding: 4px 10px;
+  margin-bottom: 6px;
+}
+.rank-box:last-child { margin-bottom: 0; }
+.rank-num { flex: none; width: 92px; }
+.rank-faces { display: flex; flex-wrap: wrap; gap: 4px; }
+.rank-faces img { width: 30px; height: 30px; object-fit: contain; display: block; cursor: pointer; }

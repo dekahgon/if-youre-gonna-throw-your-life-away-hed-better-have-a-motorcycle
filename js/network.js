@@ -444,7 +444,7 @@
   const measuresEl = document.getElementById('measures');
   measuresEl.innerHTML = MN.METRICS.map(
     (m, i) =>
-      `<div class="row"></div><div class="row item"><span class="label" data-i="${i}">${MN.esc(m.label)}</span>: <span class="val" data-key="${m.key}">—</span></div>`
+      `<div class="row item"><span class="label" data-i="${i}">${MN.esc(m.label)}</span>: <span class="val" data-key="${m.key}">—</span></div>`
   ).join('');
   measuresEl.querySelectorAll('.label').forEach((el) => {
     el.addEventListener('mouseenter', () => {
@@ -460,7 +460,55 @@
     for (const m of MN.METRICS) {
       measuresEl.querySelector(`[data-key="${m.key}"]`).textContent = MN.formatMetric(m, vals[m.key]);
     }
+    renderRanking(graph);
   }
+
+  // ======================================================================
+  // [most connected]: the five highest numbers of connections (co-stars, not movies)
+  // ======================================================================
+  const rankingEl = document.getElementById('ranking');
+
+  function renderRanking(graph) {
+    const byDegree = new Map();
+    for (const id of graph.nodes) {
+      const k = (graph.neighbors.get(id) || new Set()).size;
+      if (!byDegree.has(k)) byDegree.set(k, []);
+      byDegree.get(k).push(id);
+    }
+    const levels = [...byDegree.keys()].sort((a, b) => b - a).slice(0, 5);
+    if (!levels.length) {
+      rankingEl.innerHTML = '<div class="empty-note">no characters in the network</div>';
+      return;
+    }
+    rankingEl.innerHTML = levels
+      .map((k) => {
+        const faces = byDegree
+          .get(k)
+          .map((id) => D.charsById.get(id))
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map((c) => `<img src="${MN.esc(MN.faceUrl(c))}" data-id="${MN.esc(c.id)}" alt="${MN.esc(MN.displayName(c))}">`)
+          .join('');
+        return `<div class="rank-box"><span class="rank-num">${MN.numberWords(k)}</span><span class="rank-faces">${faces}</span></div>`;
+      })
+      .join('');
+    rankingEl.querySelectorAll('img').forEach((img) => {
+      img.addEventListener('error', () => {
+        const full = MN.fullImageUrl(D.charsById.get(img.dataset.id));
+        if (img.getAttribute('src') !== full) img.setAttribute('src', full);
+      }, { once: true });
+    });
+  }
+
+  rankingEl.addEventListener('mouseover', (ev) => {
+    const img = ev.target.closest('img[data-id]');
+    if (!img) return;
+    const c = D.charsById.get(img.dataset.id);
+    const r = img.getBoundingClientRect();
+    showTip(`<span class="tip-name">${MN.esc(MN.displayName(c))}</span>${EXT_ICON}`, r.left + r.width / 2, r.top - 1, c.url);
+  });
+  rankingEl.addEventListener('mouseout', (ev) => {
+    if (ev.target.closest('img[data-id]')) hideTipSoon();
+  });
 
   // ======================================================================
   // editing mode

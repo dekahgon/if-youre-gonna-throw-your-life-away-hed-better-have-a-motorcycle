@@ -242,6 +242,13 @@
       compute: (c) => c.G.m,
     },
     {
+      key: 'avg_degree',
+      label: 'average degree',
+      def: 'The average number of other characters each character has appeared with. Each co-star counts once, however many movies they share.',
+      formula: 'k̄ = 2m / n',
+      compute: (c) => (c.G.n === 0 ? null : (2 * c.G.m) / c.G.n),
+    },
+    {
       key: 'density',
       label: 'density',
       def: 'The share of all possible connections that actually exist. 1 means every character has appeared with every other one.',
